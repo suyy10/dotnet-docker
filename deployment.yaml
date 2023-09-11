@@ -16,6 +16,6 @@ spec:
         "kubernetes.io/os": linux
       containers:
       - name: aspnetapp
-        image: susuregistry.azurecr.io/dotnet-docker/aspnetapp:c11c775cb6de55a665139766d99a4fc5236aa6af
+        image: susuregistry.azurecr.io/dotnet-docker/aspnetapp
         ports:
         - containerPort: 80
