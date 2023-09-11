@@ -7,11 +7,6 @@ spec:
   selector:
     matchLabels:
       app: aspnetapp
-  strategy:
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 1
-  minReadySeconds: 5 
   template:
     metadata:
       labels:
@@ -21,11 +16,6 @@ spec:
         "kubernetes.io/os": linux
       containers:
       - name: aspnetapp
-        image: susuregistry.azurecr.io/dotnet-docker/aspnetapp
+        image: susuregistry.azurecr.io/dotnet-docker/aspnetapp:c11c775cb6de55a665139766d99a4fc5236aa6af
         ports:
         - containerPort: 80
-        resources:
-          requests:
-            cpu: 250m
-          limits:
-            cpu: 500m
