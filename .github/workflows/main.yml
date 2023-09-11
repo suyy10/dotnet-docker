@@ -43,5 +43,5 @@ jobs:
           namespace: 'default'
           manifests: |
              deployment.yaml
-          images: '${{ secrets.registry }}.azurecr.io/${{ secrets.repository }}/azure-vote-front:${{ github.sha }}'
+          images: '${{ secrets.registry }}.azurecr.io/${{ secrets.repository }}/aspnetapp:${{ github.sha }}'
           pull-images: false
